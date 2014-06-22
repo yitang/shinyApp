@@ -29,8 +29,9 @@ OK, you've made your shiny app, now it's time to make your pitch. You get 5 slid
 
 Here's what you need
 
-- [ ] 5 slides to pitch our idea done in Slidify
-- [ ] Your presentation pushed to github
+- [X] 5 slides to pitch our idea done in Slidify
+- [X] Your presentation pushed to github
+  publish(user = 'yiStats', repo = 'shinyApp')
 - [ ] A link to your github presentation pasted into the text box below
 
 Your presentation must satisfy the following
@@ -39,13 +40,13 @@ Your presentation must satisfy the following
   require(slidify)
   slidify('author/index.Rmd')
   browseURL('author/index.Rmd')
-- [ ] It must be 5 pages
+- [X] It must be 5 pages
 - [ ] It must be on github
   cp documentation/yitang/index.html documentation.html
   git add documentation.html
   git commit -m add documentaiton.html'
   git push -u origin master 
-- [ ] It must contained some embedded R code that gets run when slidifying the document
+- [X] It must contained some embedded R code that gets run when slidifying the document
   
 
 Notice to publish your slidify presentation to github, there's the publish command. This link outlines how to do it (it's one line). 
