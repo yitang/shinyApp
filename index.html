@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo of my Shiny App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Demo of my Shiny App">
+  <meta name="author" content="yi tang">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Demo of my Shiny App</h1>
+    <h2>A Single Plot for Multi-variables comparasion</h2>
+    <p>yi tang<br/>Statistician</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Density Estimation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The main idea of this app is to compare common variables among two dataset. The method used is call <strong>Kernal Density Estimation</strong>, compuated by <code>density()</code> function. One example is as follows. </p>
+
+<pre><code class="r">hist(rnorm(1000), prob=T)
+lines(density(rnorm(1000, 1)), col = 2)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Input</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Click <code>Choose File</code> to upload csv data file, it will open an new window to let user nevigate the file location. </p>
+
+<p>The blue bar underneed shows the progress. For a large data file, the browser may freeze, please be paithence. </p>
+
+<p>The data file must meet following critirials: </p>
+
+<ul>
+<li>standard csv file, i.e. with header and &#39;,&#39; deliminated. </li>
+<li>two data files should have at least one common columns to compare with.</li>
+<li>the columns to be compared should be numeric values, i.e. 2, 10.4 etc. </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Vairblaes to Compare</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>After two data files are uploaded, a new block naemd <code>Choose columns</code> will come up. </p>
+
+<p>It shows the variables to compare among the two dataset. Only common variables among two dataset are aviavbale. </p>
+
+<p>Choose variables to compare by clicking the vairable name. You can compare multiple varialbe at once. </p>
+
+<p>Pressure `Compare to produce the density comparing plots. </p>
+
+<p>You can repeat <code>Choose columns</code> and <code>Compare</code> many times. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Plots</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A graphical panel is produced on the right. </p>
+
+<ul>
+<li>Title shows the two file names just been uploaded, with &#39;v.s&#39; in between.</li>
+<li>The x-axis shows the value of variables, y-axis is the density calcualted by <code>density()</code>.</li>
+<li>Legend demonstrates the colour used in the plot. Red is for File1 and blue for File2.</li>
+<li>The sub-caption of each plot shows which variable it refers to.</li>
+</ul>
+
+<p>In this setting, it is easy to compare one vairblae between two dataset at a time. </p>
+
+<p>Click <code>Download plot</code> to save the plots as a png file. It will be saved in Download folder, named image.png. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Density Estimation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Input'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Vairblaes to Compare'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Plots'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

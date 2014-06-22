@@ -1,0 +1,66 @@
+** Your Shiny Application
+  
+- [ ] Write a shiny application with associated supporting documentation. The documentation should be thought of as whatever a user will need to *get started* using your application.
+- [X] Deploy the application on Rstudio's shiny server
+  shinyapps::setAccountInfo(name='yitang', token='D7E2B4AB1EFBC4B1FCA99A3A4208320E', secret='ADdIqS8iYkieL5WJJSkEVijmYFALkDXSedfCIdTn')
+  deployApp()
+  https://yitang.shinyapps.io/density_compare/
+- [X] Share the application link by pasting it into the text box below
+  https://yitang.shinyapps.io/density_compare/
+- [X] Share your server.R and ui.R code on github
+  
+
+The application must include the following:
+
+- [X] Some form of input (widget: textbox, radio button, checkbox, ...)
+  file input 
+- [ ] Some operation on the ui input in sever.R
+  renderUI() 
+- [ ] Some reactive output displayed as a result of server calculations
+  reactive ggplot 
+- [ ] You must also include enough documentation so that a novice user could use your application.
+- [ ] The documentation should be at the Shiny website itself. Do not post to an external link.
+
+The Shiny application in question is entirely up to you. However, if you're having trouble coming up with ideas, you could start from the simple prediction algorithm done in class and build a new algorithm on one of the R datasets packages. Please make the package simple for the end user, so that they don't need a lot of your prerequisite knowledge to evaluate your application. You should emphasize a simple project given the short time frame.  
+
+** Your Reproducible Pitch Presentation
+
+OK, you've made your shiny app, now it's time to make your pitch. You get 5 slides (inclusive of the title slide)  to pitch a your app. You're going to create a web page using Slidify with an html5 slide deck.
+
+Here's what you need
+
+- [ ] 5 slides to pitch our idea done in Slidify
+- [ ] Your presentation pushed to github
+- [ ] A link to your github presentation pasted into the text box below
+
+Your presentation must satisfy the following
+
+- [X] It must be done in Slidify
+  require(slidify)
+  slidify('author/index.Rmd')
+  browseURL('author/index.Rmd')
+- [ ] It must be 5 pages
+- [ ] It must be on github
+  cp documentation/yitang/index.html documentation.html
+  git add documentation.html
+  git commit -m add documentaiton.html'
+  git push -u origin master 
+- [ ] It must contained some embedded R code that gets run when slidifying the document
+  
+
+Notice to publish your slidify presentation to github, there's the publish command. This link outlines how to do it (it's one line). 
+
+http://slidify.org/publish.html
+
+You can also do it manually, though your github branch must have a .nojekyll fle and be on a branch names gh-pages. There's more on gh-pages here https://pages.github.com/ though remember the slidify publish command takes care of this for you if you'd like.
+
+
+** Github guide 
+
+Secondly, people have been having some trouble publishing their slidify presentation to github. I've created a quick example here https://github.com/bcaffo/testDeck that you can fork and build off of. There's a couple of points that seem to keep arising:
+
+1.) The empty .nojekyll file is important, if you forget it your page may not display
+2.) All your changes have to be on a branch called gh-pages, make sure you've merged into that branch
+3.) your file will be at username.github.io/projectDirectory/filename.html So, for example, on my example it's http://bcaffo.github.io/testDeck/index.html
+4.) If your fork my repo, it may not show up as a page for you for a few minutes. Also, I found out that you have to commit a change. (So, for example just edit the readme file and commit it if you want to just fork it and make sure that it's displaying for you).
+5.) Some of the issues with the publish command appear to be related to git not being your path. Either way, it's probably better to directly use git rather than the publish command anyway.
