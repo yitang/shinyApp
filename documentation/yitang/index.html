@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo of my Shiny App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Demo of my Shiny App">
+  <meta name="author" content="yi tang">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Demo of my Shiny App</h1>
+    <h2>Multi-vairblaes density</h2>
+    <p>yi tang<br/>Statistician</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>why we need this?</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">df1 &lt;- data.frame(x = rnorm(100), y = rpois(100, 2))
+df2 &lt;- data.frame(x = rnorm(100, 0, 4), y = rpois(100, 4))
+hist(df1$x, prob=T)
+lines(density(df2$x), col = 2)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-11.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+<pre><code class="r">hist(df2$y, prob = T)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-12.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+<pre><code class="r">lines(density(df2$y, col - 2))
+</code></pre>
+
+<pre><code>## Error: non-numeric argument to binary operator
+</code></pre>
+
+<p>compare common vairables in two dataset, for exmaple<br>
+1. simulated v.s. historical dataset 
+3. records before and after an big event </p>
+
+<p>advantage: multi-variables at the same time, in a single frame. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Dynamic Input</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>two stadanrd csv files, with header and &#39;.&#39; deliminated. </p>
+
+<p>multi-select common variables among two dataset.</p>
+
+<p>press submit to run. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>configure figure</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>density options </li>
+<li>histogram options </li>
+<li></li>
+</ol>
+
+<pre><code class="R, echo = TRUE, results = &#39;asis&#39;">rnorm(10)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>save img</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>300 dpi png file, suitable for World document </li>
+<li>eps/pdf, for LaTeX </li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='why we need this?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Dynamic Input'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='configure figure'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='save img'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
